@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/cubits/get_weather_cubit/get_weather_cubit.dart';
 import 'package:weather_app/models/weather_model.dart';
-import 'package:weather_app/views/search_view.dart';
 
 class WeatherInfoBody extends StatelessWidget {
   const WeatherInfoBody({Key? key}) : super(key: key);
@@ -18,7 +17,7 @@ class WeatherInfoBody extends StatelessWidget {
           CustomText(weatherModel: weatherModel),
           Text(
             'updated ${weatherModel.date.hour}:${weatherModel.date.minute}',
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 24,
             ),
           ),
@@ -36,13 +35,13 @@ class WeatherInfoBody extends StatelessWidget {
                 children: [
                   Text(
                     'Maxtemp: ${weatherModel.maxTemp.round()}',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 16,
                     ),
                   ),
                   Text(
                     'Mintemp: ${weatherModel.minTemp.round()}',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 16,
                     ),
                   ),
