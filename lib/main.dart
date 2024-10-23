@@ -14,8 +14,12 @@ class WeatherApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => GetWeatherCubit(),
-      child: const MaterialApp(
-        home: HomeView(),
+      child: MaterialApp(
+        theme: ThemeData(
+          primarySwatch: Colors.amber,
+          primaryColor: Colors.amber, // Explicitly set the primary color
+        ),
+        home: const HomeView(),
       ),
     );
   }
